@@ -5880,7 +5880,7 @@ Sintonizzatore esterno ATSC DTB-H260F Samsung&lt;/div&gt;&#13;
 &lt;p class="checkmark-grey fl"&gt;&lt;/p&gt;&lt;p class="fl"&gt;&lt;strong&gt;News and exclusive offers!&lt;/strong&gt;&lt;br/&gt;Sign up to receive email updates on special promotions, new product announcements, gift ideas and more.&lt;/p&gt;&lt;div class="clear"&gt;&lt;/div&gt;&#13;
 &lt;p class="checkmark-grey fl"&gt;&lt;/p&gt;&lt;p class="fl"&gt;&lt;strong&gt;Order History&lt;/strong&gt;&lt;br/&gt;Receive important information about your order. You can even track it up to the minute it arrives.&lt;/p&gt;&lt;div class="clear"&gt;&lt;/div&gt;&#13;
 &lt;p class="checkmark-grey fl"&gt;&lt;/p&gt;&lt;p class="fl"&gt;&lt;strong&gt;Faster Checkout&lt;/strong&gt;&lt;br/&gt;Save your billing and shipping information to make it easier to buy your favorite gear.&lt;br /&gt;&#13;
-(&lt;a href="$url(Page-Show,cid,security-policy)$"&gt;read more about security.  FOUND IT!!&lt;/a&gt;)&lt;/p&gt;&lt;div class="clear"&gt;&lt;/div&gt;</custom-attribute>
+(&lt;a href="$url(Page-Show,cid,security-policy)$"&gt;read more about security.  &lt;/p&gt;FOUND IT!!&lt;/p&gt; &lt;/a&gt;)&lt;/p&gt;&lt;div class="clear"&gt;&lt;/div&gt;</custom-attribute>
             <custom-attribute attribute-id="body" xml:lang="fr-FR">&lt;p&gt;&lt;span style="font-size: large;"&gt;Pourquoi créer un compte ?&lt;/span&gt;&lt;/p&gt;&#13;
 &lt;p class="checkmark-grey fl"&gt;&lt;/p&gt;&lt;p class="fl"&gt;&lt;strong&gt;Actualités et offres exclusives !&lt;/strong&gt;&lt;br/&gt;Inscrivez-vous pour recevoir des informations par e-mail sur des promotions spéciales, être informé de l'arrivée de nouveaux produits, recevoir des idées de cadeaux, etc.&lt;/p&gt;&lt;div class="clear"&gt;&lt;/div&gt;&#13;
 &lt;p class="checkmark-grey fl"&gt;&lt;/p&gt;&lt;p class="fl"&gt;&lt;strong&gt;Historique des commandes&lt;/strong&gt;&lt;br/&gt;Recevez d'importantes informations sur votre commande. Vous pouvez même suivre votre commande jusqu'à sa livraison.&lt;/p&gt;&lt;div class="clear"&gt;&lt;/div&gt;&#13;
@@ -6645,19 +6645,19 @@ Sintonizzatore esterno ATSC DTB-H260F Samsung&lt;/div&gt;&#13;
         <custom-attributes>
             <custom-attribute attribute-id="body" xml:lang="x-default">&lt;div class="copyright"&gt;&amp;copy; 2004-2016 Demandware or its affiliates. All rights reserved.&lt;/div&gt;&#13;
                 &lt;div class="postscript"&gt;This is a demo store only. Orders made will NOT be processed.&lt;/div&gt;&#13;
-		&lt;!-- SG.100.0.99 --&gt;</custom-attribute>
+        &lt;!-- SG.100.0.99 --&gt;</custom-attribute>
             <custom-attribute attribute-id="body" xml:lang="fr-FR">&lt;div class="copyright"&gt;© 2004-2016 Demandware ou ses affiliés. Tous droits réservés.&lt;/div&gt;&#13;
                 &lt;div class="postscript"&gt;Ceci est une boutique de démonstration uniquement. Les commandes NE SERONT PAS traitées.&lt;/div&gt;&#13;
-		&lt;!-- SG.100.0.99 --&gt;</custom-attribute>
+        &lt;!-- SG.100.0.99 --&gt;</custom-attribute>
             <custom-attribute attribute-id="body" xml:lang="it-IT">&lt;div class="copyright"&gt;© 2004-2016 Demandware o società affiliate. Tutti i diritti riservati.&lt;/div&gt;&#13;
                 &lt;div class="postscript"&gt;Questo è un negozio fittizio a scopo dimostrativo. Gli ordini effettuati NON verranno evasi.&lt;/div&gt;&#13;
-		&lt;!-- SG.100.0.99 --&gt;</custom-attribute>
+        &lt;!-- SG.100.0.99 --&gt;</custom-attribute>
             <custom-attribute attribute-id="body" xml:lang="ja-JP">&lt;div class="copyright"&gt;© 2004-2016 Demandware またはその系列会社。All Rights Reserved.&lt;/div&gt;&#13;
                 &lt;div class="postscript"&gt;これはデモのみを目的とするストアです。注文を確定しても処理されません。&lt;/div&gt;&#13;
-		&lt;!-- SG.100.0.99 --&gt;</custom-attribute>
+        &lt;!-- SG.100.0.99 --&gt;</custom-attribute>
             <custom-attribute attribute-id="body" xml:lang="zh-CN">&lt;div class="copyright"&gt;© 2004-2016 Demandware 或其附属公司。保留一切权利。&lt;/div&gt;&#13;
                 &lt;div class="postscript"&gt;此仅为示范商店。所下订单不会被处理。&lt;/div&gt;&#13;
-		&lt;!-- SG.100.0.99 --&gt;</custom-attribute>
+        &lt;!-- SG.100.0.99 --&gt;</custom-attribute>
         </custom-attributes>
     </content>
 
