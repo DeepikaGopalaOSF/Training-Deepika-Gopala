@@ -6,11 +6,7 @@
 <div class="header-banner">
     <isslot id="header-banner" description="Slot above the site header" context="global" />
 </div>
-<isif condition="${true}">
-  <div id="stickey-banner">
-    <iscontentasset aid="stickey-header-banner"/>
-  </div>
-</isif>
+
 
 <div class="top-banner" role="banner">
     <button class="menu-toggle"><i class="menu-icon fa fa-bars"></i><span class="visually-hidden">Menu</span></button>
@@ -57,3 +53,9 @@
     </div>
 
 </div><!-- /header -->
+<isset name="desktopContentAsset" value="${dw.content.ContentMgr.getContent("stickey-header-banner")}" scope="page"/>
+<isif condition="${desktopContentAsset  && desktopContentAsset.online}">
+  <div id="stickey-banner">
+    <iscontentasset aid="stickey-header-banner"/>
+  </div>
+</isif>
