@@ -1,0 +1,6 @@
+
+<iscomment><a>Hello home page</a></iscomment>
+<div style="text-align:center">
+  <isset name = "dskObj" value = "${dw.content.ContentMgr.getContent('homepage-banner')}" scope = "page">
+  <img alt="${dskObj.name}" src="${dskObj.custom.desktopBannerImage.getURL()}" title="${dskObj.name}"/>
+</div>
