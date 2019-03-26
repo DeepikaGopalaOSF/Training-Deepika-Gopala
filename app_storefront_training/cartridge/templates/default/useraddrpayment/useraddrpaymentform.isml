@@ -1,0 +1,70 @@
+<isdecorate template="useraddrpayment/pt_useraddrpayment_UI">
+<isinclude template="util/modules"/>
+    <form action="${URLUtils.continueURL()}" method="post">        
+        <iscomment>  Personal Info  </iscomment>
+        <div class="panel">
+        <div class="panel-heading"> PERSONAL INFO </div>
+            
+        <div class="panel-body">
+            <isinputfield formfield="${pdict.CurrentForms.useraddrpayment.fname}" type="input"/>
+            <isinputfield formfield="${pdict.CurrentForms.useraddrpayment.lname}" type="input"/>
+            <isinputfield formfield="${pdict.CurrentForms.useraddrpayment.gender}" type="select"/>
+            <isinputfield formfield="${pdict.CurrentForms.useraddrpayment.birthdate}" type="date"/>
+            <isinputfield formfield="${pdict.CurrentForms.useraddrpayment.website}" type="input"/>
+            <isinputfield formfield="${pdict.CurrentForms.useraddrpayment.email}" type="input"/>
+            <isinputfield formfield="${pdict.CurrentForms.useraddrpayment.subscribe}" type="checkbox"/>
+            <isinputfield formfield="${pdict.CurrentForms.useraddrpayment.comments}" type="textarea"/>
+        </div>
+        </div>
+<br/>
+        <iscomment> Adress Tab   </iscomment>
+        <div class="panel">
+                <div class="panel-heading"> ADDRESS </div>
+
+                <div class="panel-body">     
+                    <isinputfield formfield="${pdict.CurrentForms.useraddrpayment.address1}" type="input"/>
+                    <isinputfield formfield="${pdict.CurrentForms.useraddrpayment.address2}" type="input"/>
+                    <isinputfield formfield="${pdict.CurrentForms.useraddrpayment.country}" type="select"/>
+                    <isinputfield formfield="${pdict.CurrentForms.useraddrpayment.state}" type="select"/>
+                    <isinputfield formfield="${pdict.CurrentForms.useraddrpayment.city}" type="input"/>
+                    <isinputfield formfield="${pdict.CurrentForms.useraddrpayment.zipcode}" type="input"/>
+                    <isinputfield formfield="${pdict.CurrentForms.useraddrpayment.phone}" type="input"/>    
+                </div>  
+        </div>  
+            <br/>
+        <iscomment> Payment Tab  </iscomment>
+        <div class="panel">
+            <div class="panel-heading"> PAYMENT </div>
+
+            
+                <div class="panel-body">
+                    <input name="${pdict.CurrentForms.useraddrpayment.creditcard}" value="1" type="radio" class="radiobutton"/><label>${Resource.msg('forms.user.payment.creditcard.label',"forms",null)}</label>
+                    <input name="${pdict.CurrentForms.useraddrpayment.billmelater}" value="2" type="radio" class="radiobutton"/><label>${Resource.msg('forms.user.payment.billmelater.label',"forms",null)}</label>
+                    <div class="creditcard-content">
+                        <isinputfield formfield="${pdict.CurrentForms.useraddrpayment.cardname}" type="input"/>
+                        <isinputfield formfield="${pdict.CurrentForms.useraddrpayment.type}" type="input"/>
+                        <isinputfield formfield="${pdict.CurrentForms.useraddrpayment.number}" type="input"/>
+                        <isinputfield formfield="${pdict.CurrentForms.useraddrpayment.expirydate}" type="input"/>
+                        <isinputfield formfield="${pdict.CurrentForms.useraddrpayment.securitycode}" type="input"/>   
+                    </div>
+
+                    <div class="billme-content">   
+                        <input name="${pdict.CurrentForms.useraddrpayment.billdob}" type="input"/>
+                        <input name="${pdict.CurrentForms.useraddrpayment.ssn}" type="input"/>
+
+                        <div class="terms-conditions">
+                            <iscontentasset aid="bml-tc"/>
+                        </div>
+                            <isinputfield formfield="${pdict.CurrentForms.useraddrpayment.termsandconditions}" type="checkbox"/> 
+                    </div>
+                </div>
+        </div>      
+        <input type="submit" value="${Resource.msg('form.user.continue',"forms",null)}" name="${pdict.CurrentForms.useraddrpayment.continue.htmlname}" class="button/>
+    </form>
+</isdecorate>
+
+
+
+
+
+

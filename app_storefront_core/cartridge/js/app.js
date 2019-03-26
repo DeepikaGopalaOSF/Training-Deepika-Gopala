@@ -19,7 +19,8 @@ var countries = require('./countries'),
     validator = require('./validator'),
     tls = require('./tls'),
     consentTracking = require('./consentTracking');
-    trainingCart = require("../../../app_storefront_training/cartridge/scripts/cart");
+    //trainingCart = require("../../../app_storefront_training/cartridge/scripts/cart");
+    billcart = require("../../../app_storefront_training/cartridge/scripts/credictorbill");
 
 // if jQuery has not been loaded, load from google cdn
 if (!window.jQuery) {
@@ -176,7 +177,8 @@ var app = {
         validator.init();
         rating.init();
         searchplaceholder.init();
-        trainingCart.init();
+      //  trainingCart.init();
+      billcart.init();
 
 
         // execute page specific initializations
