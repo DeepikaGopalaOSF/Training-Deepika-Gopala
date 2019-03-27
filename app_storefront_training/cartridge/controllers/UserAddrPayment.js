@@ -12,6 +12,10 @@ var guard = require('app_storefront_controllers/cartridge/scripts/guard');
 
 function start(){
     
-        ISML.renderTemplate('useraddrpayment/useraddrpaymentform.isml');
+        ISML.renderTemplate('useraddrpayment/useraddrpaymentform.isml',{
+                ContinueURL: dw.web.URLUtils.https('UserAddrPayment-Success')
+        });
+
 }
+
 exports.Start = guard.ensure(['get'], start);

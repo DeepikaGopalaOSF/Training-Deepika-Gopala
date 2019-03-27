@@ -9,13 +9,14 @@
             <field formid="lname" label="forms.user.personalinfo.lastname.label" type="string" mandatory="true" binding="lastName" max-length="50"/>
             <field formid="gender" label="forms.user.personalinfo.gender.label" type="string" mandatory="true" bindings="gender">
                  <options>
-                    <option optionid="Female" label="gender.female" value="Female"/>
-                    <option optionid="Male" label="gender.male" value="Male"/>
+                     <option optionid="select" label="Select" value=""/>
+                    <option optionid="Female" label="form.user.gender.male.label" value="Female"/>
+                    <option optionid="Male" label="form.user.gender.female.label" value="Male"/>
                 </options>
             </field>
             <field formid="birthdate" label="forms.user.personalinfo.birthdate.label" type="date" mandatory="true" binding="birthdate" max-length="50"/>
             <field formid="website" label="forms.user.personalinfo.website.label" type="string" mandatory="true" regex="^((https?|ftp|smtp):\/\/)?(www.)?[a-z0-9]+\.[a-z]+(\/[a-zA-Z0-9#]+\/?)*$" 
-            parse-error="forms.user.personalinfo.email.parse-error" value-error="forms.user.personalinfo.email.value-error" binding="website" max-length="50"/>
+            parse-error="forms.user.personalinfo.website.parse-error" binding="website" max-length="50"/> 
             <field formid="email" label="forms.user.personalinfo.email.label" type="string" mandatory="true" regexp="^[\w-\.]{1,}@([\da-zA-Z-]{1,}\.){1,}[\da-zA-Z-]{2,6}$"
             parse-error="forms.user.personalinfo.email.parse-error" value-error="forms.user.personalinfo.email.value-error" binding="email" max-length="50"/>
             <field formid="subscribe" label="forms.user.personalinfo.subscribe.label" type="boolean" mandatory="true" binding="subscribe"/>
@@ -26,14 +27,16 @@
             <field formid="address2" label="forms.user.address.address2.label" type="string" binding="address2" max-length="50"/>
             <field formid="country" label="forms.user.address.country.label" type="string" mandatory="true" binding="country">
                  <options>
-                    <option optionid="washington" label="country.washington" value="washington"/>
-                      <option optionid="newyork" label="country.newyork" value="newyork"/>
+                     <option optionid="select" label="Select" value=""/>
+                    <option optionid="washington" label="form.user.address.country.usa" value="USA"/>
+                      <option optionid="newyork" label="form.user.address.country.india" value="India"/>
                 </options>
             </field>
             <field formid="state" label="forms.user.address.state.label" type="string" mandatory="true" binding="state">
                  <options>
-                    <option optionid="washington" label="state.washington" value="washington"/>
-                      <option optionid="newyork" label="state.newyork" value="newyork"/>
+                     <option optionid="select" label="Select" value=""/>
+                    <option optionid="washington" label="form.user.address.country.usa.washington" value="washington"/>
+                      <option optionid="newyork" label="form.user.address.country.usa.newyork" value="newyork"/>
                 </options>
             </field>
              <field formid="city" label="forms.user.address.city.label" type="string" mandatory="true" binding="city" max-length="50"/>
@@ -52,8 +55,11 @@
             <field formid="securitycode" label="forms.user.payment.creditcard.securitycode.label" type="integer" mandatory="true" binding="securitycode" max-length="50"/>
 
             <field formid="billdob" label="forms.user.payment.billmelater.dob.label" type="date" mandatory="true" binding="billdob" max-length="50"/>
+
+             <field formid="billdobmonth" label="forms.user.payment.billmelater.dobmonth.label" type="integer" mandatory="true" binding="billdob" max-length="50"/>
+                         
             <field formid="ssn" label="forms.user.payment.billmelater.ssn.label" type="integer" mandatory="true" binding="ssn" max-length="50"/>
             <field formid="termsandconditions" label="forms.user.payment.termsandconditions.label" type="boolean" mandatory="true" binding="termsandconditions"/>
-             <action formid="continue" valid-form="true"/>
+            <action formid="continue" valid-form="true"/>
    
 </form>
