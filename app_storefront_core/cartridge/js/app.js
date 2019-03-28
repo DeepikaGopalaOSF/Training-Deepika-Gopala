@@ -7,6 +7,12 @@
 
 'use strict';
 
+/* To hide cookie policy banner when cookie is already set */
+if(document.cookie.indexOf('dw_cookies_accepted')){
+    $(".cookiepolicy").hide();
+}else{
+    $(".cookiepolicy").show();
+}
 var countries = require('./countries'),
     dialog = require('./dialog'),
     minicart = require('./minicart'),
@@ -19,8 +25,7 @@ var countries = require('./countries'),
     validator = require('./validator'),
     tls = require('./tls'),
     consentTracking = require('./consentTracking');
-    //trainingCart = require("../../../app_storefront_training/cartridge/scripts/cart");
-    billcart = require("../../../app_storefront_training/cartridge/scripts/credictorbill");
+    cookiepolicyaccept = require("../../../app_storefront_training/cartridge/scripts/cookiepolicy");
 
 // if jQuery has not been loaded, load from google cdn
 if (!window.jQuery) {
@@ -60,7 +65,8 @@ function initializeEvents() {
             }
 
             $(this).next('div.char-count').find('.char-remain-count').html(charsRemain);
-        });
+        })
+
 
     /**
      * initialize search suggestions, pending the value of the site preference(enhancedSearchSuggestions)
@@ -167,9 +173,18 @@ var app = {
         if (document.cookie.length === 0) {
             $('<div/>').addClass('browser-compatibility-alert').append($('<p/>').addClass('browser-error').html(Resources.COOKIES_DISABLED)).appendTo('#browser-check');
         }
+
+        alert(document.cookie);
+        if(document.cookie.indexOf('dw_cookies_accepted')){
+            $(".cookiepolicy").hide();
+        }else{
+            $(".cookiepolicy").show();
+        }
         initializeDom();
         initializeEvents();
 
+
+        
         // init specific global components
         countries.init();
         tooltip.init();
@@ -177,8 +192,7 @@ var app = {
         validator.init();
         rating.init();
         searchplaceholder.init();
-      //  trainingCart.init();
-      billcart.init();
+        cookiepolicyaccept.init();
 
 
         // execute page specific initializations
