@@ -7,12 +7,6 @@
 
 'use strict';
 
-/* To hide cookie policy banner when cookie is already set */
-if(document.cookie.indexOf('dw_cookies_accepted')){
-    $(".cookiepolicy").hide();
-}else{
-    $(".cookiepolicy").show();
-}
 var countries = require('./countries'),
     dialog = require('./dialog'),
     minicart = require('./minicart'),
@@ -24,7 +18,7 @@ var countries = require('./countries'),
     util = require('./util'),
     validator = require('./validator'),
     tls = require('./tls'),
-    consentTracking = require('./consentTracking');
+    consentTracking = require('./consentTracking'),
     cookiepolicyaccept = require("../../../app_storefront_training/cartridge/scripts/cookiepolicy");
 
 // if jQuery has not been loaded, load from google cdn
@@ -36,8 +30,8 @@ if (!window.jQuery) {
 }
 
 require('./jquery-ext')();
-require('./cookieprivacy')();
-consentTracking.init();
+//require('./cookieprivacy')();
+//consentTracking.init();
 require('./captcha')();
 
 function initializeEvents() {
@@ -174,12 +168,7 @@ var app = {
             $('<div/>').addClass('browser-compatibility-alert').append($('<p/>').addClass('browser-error').html(Resources.COOKIES_DISABLED)).appendTo('#browser-check');
         }
 
-        alert(document.cookie);
-        if(document.cookie.indexOf('dw_cookies_accepted')){
-            $(".cookiepolicy").hide();
-        }else{
-            $(".cookiepolicy").show();
-        }
+      
         initializeDom();
         initializeEvents();
 
@@ -205,6 +194,13 @@ var app = {
         // Check TLS status if indicated by site preference
         if (SitePreferences.CHECK_TLS === true) {
             tls.getUserAgent();
+        }
+
+
+        if(document.cookie.indexOf("dw_cookies_accepted")>0){
+            $("div.cookiepolicy").hide();
+        }else{
+            $("div.cookiepolicy").show();
         }
     }
 };

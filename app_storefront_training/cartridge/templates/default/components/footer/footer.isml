@@ -23,18 +23,19 @@
     </div>  
 </footer>
 
-<iscontentasset aid="footer-copy"/> 
-<div class="cookiepolicy">
-<isset name="cookiepolicyCA" value = "${dw.content.ContentMgr.getContent('cookie-policy')}" scope="page"/>
- <isif condition="${cookiepolicyCA && cookiepolicyCA.custom.body!=null && cookiepolicyCA.online } ">
-  <isprint value="${dw.content.ContentMgr.getContent("cookie-policy").custom.body}" encoding="off" />
+    <div class="cookiepolicy">
+<isset name="cookiepolicyCA" value="${dw.content.ContentMgr.getContent('cookie-policy')}" scope="pdict"/>
+ <isif condition="${pdict.cookiepolicyCA && pdict.cookiepolicyCA.custom.body!= null && pdict.cookiepolicyCA.online } ">
+  <isprint value="${pdict.cookiepolicyCA.custom.body}" encoding="off" />
 </isif>
 </div>
+<iscontentasset aid="footer-copy"/> 
+
 
 <iscomment>
     Customer registration can happen everywhere in the page flow. As special tag in the pdict
     is indicating it. So we have to check on every page, if we have to report this event for
-    the reporting engine.
+    the reporting engine.cooki
 </iscomment>
 <isinclude template="util/reporting/ReportUserRegistration.isml"/>
 
