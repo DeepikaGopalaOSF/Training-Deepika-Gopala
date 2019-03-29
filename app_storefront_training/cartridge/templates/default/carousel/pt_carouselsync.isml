@@ -1,0 +1,32 @@
+<iscontent type="text/html" charset="UTF-8" compact="true"/>
+<!doctype html>
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+
+<head>
+    <isinclude template="util/modules"/>
+
+    <isinclude template="components/header/htmlhead"/>
+    <iscomment>Carousel Based Content</iscomment>
+</head>
+
+<body>
+
+    <div id="wrapper" class="pt_checkout">
+
+        <isinclude template="components/header/header"/>
+
+        <div id="main" role="main" class="primary-focus clearfix">
+
+            <div id="primary" class="full-width">
+                <isreplace/>
+            </div>
+
+       </div>
+
+
+        <isinclude template="components/footer/footer"/>
+
+   </div>
+
+</body>
+</html>
