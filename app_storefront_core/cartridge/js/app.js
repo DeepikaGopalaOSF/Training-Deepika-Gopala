@@ -32,6 +32,7 @@ require('./jquery-ext')();
 require('./cookieprivacy')();
 consentTracking.init();
 require('./captcha')();
+require("../../../app_storefront_training/cartridge/scripts/carouselsync");
 
 function initializeEvents() {
     var controlKeys = ['8', '13', '46', '45', '36', '35', '38', '37', '40', '39'];

@@ -1,0 +1,21 @@
+
+<iscomment>JBDCKSJD</iscomment>
+<isdecorate template="carousel/pt_carouselsync">
+  <isinclude template="util/modules"/>
+  
+    <div style="text-align:center">
+      <isset name = "dskObj" value = "${dw.content.ContentMgr.getContent("carousel-sync")}" scope = "page"/>
+          <isif condition="${dskObj  && dskObj.online && dskObj.custom.body!= null}">
+          <div class="carousel-sync-for">
+               <isprint value="${dskObj.custom.body}" encoding="off" />
+          </div>
+          <div class="carousel-sync-nav">
+               <isprint value="${dskObj.custom.body}" encoding="off" />
+          </div>
+       </isif>
+    </div>
+
+</isdecorate>
+
+
+
