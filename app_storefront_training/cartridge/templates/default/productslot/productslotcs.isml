@@ -1,0 +1,5 @@
+<isdecorate template="productslot/pt_productslot">
+
+<isslot id="ten-product-slot" description="A slot with ten products" context="global"/>
+
+</isdecorate>
