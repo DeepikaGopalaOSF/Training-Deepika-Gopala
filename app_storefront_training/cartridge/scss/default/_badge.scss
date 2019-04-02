@@ -1,0 +1,21 @@
+.search-result-items .grid-tile{
+    position:relative;
+}
+
+.clothingbadge{
+    border-radius: 50%;
+    color: white;
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    display: table;
+    background: red;
+    z-index: 9;
+    text-align: center;
+}
+.clothingbadge span{
+    display: table-cell;
+    vertical-align: middle;   
+}
