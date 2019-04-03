@@ -10,48 +10,55 @@
 <footer>
 
     <div class="footer-container">
-            <div class="footer-item">
+            <div class="grid-x grid-margin-x" data-equalizer data-equalize-on="medium" id="fullwidth-content">
                 <isset name="contentObj" value="${dw.content.ContentMgr.getContent('full-width-content-asset')}" scope="page"/>
                 <isprint value="${contentObj.custom.body}" encoding="off"/>
             </div>
-            <div class="footer-item greyBg shop-payment-nshipping">
-                <div class="rowitem">
-                    <isset name="safeshoppingImage" value="${dw.content.ContentMgr.getContent('safe-shopping')}" scope="page"/>
-                   <p> <isprint value="${safeshoppingImage.custom.body}" encoding="off"/></p>
-                    <img src="${safeshoppingImage.custom.desktopBannerImage.getURL()}" alt="${safeshoppingImage.name}" title="${safeshoppingImage.name}" width="100" height="100"/>
-                </div>
-                <div class="rowitem">
-                     <isset name="visa" value="${dw.content.ContentMgr.getContent('visa-payment')}" scope="page"/>
-                     <p> <isprint value="${visa.custom.body}" encoding="off"/></p>
-                    <div class="col-break">
-                        <img src="${visa.custom.desktopBannerImage.getURL()}" alt="${visa.name}" title="${visa.name}" width="160" height="160"  />
+            <iscomment> <div class="footer-item secondary shop-payment-nshipping"> </iscomment>
+            <div class="callout secondary grid-x grid-margin-x" data-equalizer data-equalize-on="medium" id="shipping-content">
+                <div class="cell medium-4">
+                    <div class="callout" data-equalizer-watch>
+                        <isset name="safeshoppingImage" value="${dw.content.ContentMgr.getContent('safe-shopping')}" scope="page"/>
+                    <p> <isprint value="${safeshoppingImage.custom.body}" encoding="off"/></p>
+                        <img src="${safeshoppingImage.custom.desktopBannerImage.getURL()}" alt="${safeshoppingImage.name}" title="${safeshoppingImage.name}" width="100" height="100"/>
                     </div>
-                    <div class="col-break">
-                        <isset name="massterCard" value="${dw.content.ContentMgr.getContent('mastercard-payment')}" scope="page"/>
-                        <img src="${massterCard.custom.desktopBannerImage.getURL()}" alt="${massterCard.name}" title="${massterCard.name}"  width="80" height="80"  />
-                    </div>
-                    <div class="col-break">
-                        <isset name="paypal" value="${dw.content.ContentMgr.getContent('paypal-payment')}" scope="page"/>
-                        <img src="${paypal.custom.desktopBannerImage.getURL()}" alt="${paypal.name}" title="${paypal.name}"  width="80" height="80"  />
-                    </div>    
                 </div>
-                <div class="rowitem">
-                    <isprint value="${dw.content.ContentMgr.getContent('shipping-means').custom.body}" encoding="off"/>
+                <div class="cell medium-4">
+                    <div class="callout" data-equalizer-watch>
+                        <isset name="visa" value="${dw.content.ContentMgr.getContent('visa-payment')}" scope="page"/>
+                        <p> <isprint value="${visa.custom.body}" encoding="off"/></p>
+                        <div class="col-break">
+                            <img src="${visa.custom.desktopBannerImage.getURL()}" alt="${visa.name}" title="${visa.name}" width="160" height="160"  />
+                        </div>
+                        <div class="col-break">
+                            <isset name="massterCard" value="${dw.content.ContentMgr.getContent('mastercard-payment')}" scope="page"/>
+                            <img src="${massterCard.custom.desktopBannerImage.getURL()}" alt="${massterCard.name}" title="${massterCard.name}"  width="80" height="80"  />
+                        </div>
+                        <div class="col-break">
+                            <isset name="paypal" value="${dw.content.ContentMgr.getContent('paypal-payment')}" scope="page"/>
+                            <img src="${paypal.custom.desktopBannerImage.getURL()}" alt="${paypal.name}" title="${paypal.name}"  width="80" height="80"  />
+                        </div>    
+                    </div>
+                </div>
+                <div class="cell medium-4">
+                    <div class="callout" data-equalizer-watch>
+                        <isprint value="${dw.content.ContentMgr.getContent('shipping-means').custom.body}" encoding="off"/>
+                    </div>
                 </div>
             </div>
-            <div class="footer-item social-support">
+            <div class="callout" id="footer-social" >
                    <isslot id="footer-column" description="Content in column 1 of the Footer" context="global" />
             </div>
-            <div class="footer-item">
+            <div class="callout">
                 <iscontentasset aid="footer-support"/>
             </div>
-            <div class="footer-item">
+            <div class="callout">
                 <iscontentasset aid="footer-about"/>
             </div>
-            <div class="footer-item">
+            <div class="callout">
                 <iscontentasset aid="footer-account"/>
             </div>
-             <div class="footer-item greyBg">
+            <div class="callout secondary">
                 <iscontentasset aid="more-information"/>
             </div>
     </div>  
