@@ -11,7 +11,33 @@ h1{
     padding:2%;
     float:left;
 } 
-.your-benefits{
-    background-color:#84bd00;
-    margin:20px;
+.footer-item{
+    float:left;
+    width:100% !important;
+}
+.footer-item p {
+    text-align:center;
+}
+.footer-container .menu-footer li{
+    display:inline;
+    margin:0 10px;
+}
+.greyBg{
+    background-color:#ccc;
+}
+.shop-payment-nshipping .rowitem{
+    width: 33%;
+    float: left;
+    text-align: center;
+}
+
+.social-support{
+    background-color:black;
+    width:100%;
+    display: block;
+}
+
+.shop-payment-nshipping > .rowitem:nth-child(1) .col-break:first-child{
+    float:left;
+    width:auto;
 }
