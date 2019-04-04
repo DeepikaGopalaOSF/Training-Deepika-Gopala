@@ -1,42 +1,3 @@
-h1{
-    text-align:center;
-
-}
-.full-width{
-    padding:20px 15px;
-}
-
-.item-content{
-    width:20%;
-    padding:2%;
-    float:left;
-} 
-.footer-item{
-    float:left;
-    width:100% !important;
-}
-.footer-item p {
-    text-align:center;
-}
-.footer-container .menu-footer li{
-    display:inline;
-    margin:0 10px;
-}
-.greyBg{
-    background-color:#ccc;
-}
-.shop-payment-nshipping .rowitem{
-    width: 33%;
-    float: left;
-    text-align: center;
-}
-
-.social-support{
-    background-color:black;
-    width:100%;
-    display: block;
-}
-
 .shop-payment-nshipping > .rowitem:nth-child(2) .col-break:first-child{
     float:left;
     width:auto;
@@ -49,4 +10,9 @@ h1{
 }
 #footer-social{
     background-color: black;
+    color:white;
+}
+
+#footer-social  *{
+    display: inline;
 }
