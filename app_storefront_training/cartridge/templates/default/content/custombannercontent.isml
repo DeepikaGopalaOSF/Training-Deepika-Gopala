@@ -1,0 +1,42 @@
+<iscontent type="text/html" charset="UTF-8" compact="true"/>
+<isif condition="${(pdict.cache != null) ? pdict.cache : true}">
+    <iscache type="relative" hour="24" varyby="price_promotion"/>
+</isif>
+<iscomment>
+    This template is best used via a **remote** include (Product-HitTile) and _not_ local include.
+    This template renders a product tile using a product. The following parameters
+    must be passed into the template module:
+
+    product         : the product to render the tile for
+    showswatches    : check, whether to render the color swatches (default is false)
+    showpricing     : check, whether to render the pricing (default is false)
+    showpromotion   : check, whether to render the promotional messaging (default is false)
+    showrating      : check, whether to render the review rating (default is false)
+    showcompare     : check, whether to render the compare checkbox (default is false)
+</iscomment>
+
+<isset name="Product" value="${pdict.product}" scope="page"/>
+
+<div class="banner-message">
+                             <div class="bannerText">${contentAsset.custom.bannerText}</div>
+                        </div>
+                        <picture>
+                            <source media="(min-width: 480px)" srcset="${contentAsset.custom.customBannerImage.getURL()}"/>
+                            <source media="(min-width: 768px)" srcset="${contentAsset.custom.customBannerImage.getURL()}"/>
+                           <img src="${contentAsset.custom.customBannerImage.getURL()}" alt="${contentAsset.custom.buttonText}"/>
+                        </picture>
+                        
+                        <div class="bannerButton">
+                            <isif condition="${contentAsset.custom.buttonText2 != null}" >                            
+                                    <iscomment> <a href="$url('Search-Show','cgid','mens')$">  </iscomment>
+                                        <button class="secondslide" style="background-color:${contentAsset.custom.btnTextColor};border-color:${contentAsset.custom.btnTextColor};color:${contentAsset.custom.btnBgColor}">${contentAsset.custom.buttonText}</button>
+                                    <iscomment> </a> </iscomment>
+                                     <iscomment> <a href="$url('Search-Show','cgid','mens')$">  </iscomment>
+                                        <button class="secondslide" style="background-color:${contentAsset.custom.btnBgColor};border-color:${contentAsset.custom.btnBgColor};color:${contentAsset.custom.btnTextColor}">${contentAsset.custom.buttonText2}</button>
+                                    <iscomment> </a> </iscomment>
+                            <iselse/>
+                                <iscomment> <a href="$url('Search-Show','cgid','clothing')$">  </iscomment>
+                                    <button class="firstslide">${contentAsset.custom.buttonText}</button>
+                                <iscomment> </a>                             </iscomment>
+                            </isif>
+                        </div> 
