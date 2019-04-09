@@ -1,7 +1,7 @@
-<iscontent type="text/html" charset="UTF-8" compact="true"/>
+<iscontent type="text/html" charset="UTF-8" compact="true" />
 
 <!--[if gte IE 9 | !IE]><!-->
-  <script src="${URLUtils.staticURL('/lib/jquery/jquery-2.1.1.min.js')}" type="text/javascript"></script>
+<script src="${URLUtils.staticURL('/lib/jquery/jquery-2.1.1.min.js')}" type="text/javascript"></script>
 <!--<![endif]-->
 
 <!--[if lte IE 8]>
@@ -21,13 +21,15 @@
 <script src="${URLUtils.staticURL('/lib/jquery/jquery.jcarousel.min.js')}" type="text/javascript"></script>
 <script src="${URLUtils.staticURL('/lib/jquery/jquery.validate.min.js')}" type="text/javascript"></script>
 <script src="${URLUtils.staticURL('/lib/foundation-sites/js/foundation.js')}" type="text/javascript"></script>
-<script src="${URLUtils.staticURL('/lib/jquery/jquery.zoom.min.js')}" ></script>
+<script src="${URLUtils.staticURL('/lib/jquery/jquery.zoom.min.js')}"></script>
 <script type="text/javascript"><isinclude template="resources/appresources"/></script>
 <script type="text/javascript"><isinclude url="${URLUtils.url('Resources-LoadTransient')}"/></script>
 <script>var consent = ${session.custom.consentTracking};</script>
 <script src="${URLUtils.staticURL('/js/app.js')}"></script>
 <isif condition="${!('pageContext' in this) || empty(pageContext)}">
-    <isscript>pageContext = new Object();</isscript>
+  <isscript>
+      pageContext = new Object();
+  </isscript>
 </isif>
 <script>pageContext = <isprint value="${JSON.stringify(pageContext)}" encoding="off"/>;</script>
 <script>
