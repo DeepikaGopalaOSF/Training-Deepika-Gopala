@@ -1,0 +1,47 @@
+<iscontent type="text/html" charset="UTF-8" compact="true"/>
+<iscache type="relative" hour="24"/>
+<iscomment>
+    This template renders the slot content of the bottom category landing slot
+    in case the slot content is of type Content Asset.
+    Note, only one content asset is rendered.
+</iscomment>
+
+<iscomment>make sure we have content at all</iscomment>
+<isif condition="${slotcontent != null}">
+
+    <h1 class="visually-hidden">Promotions</h1>
+    <div id="homepage-slider">
+      <ul id="homepage-slides">
+        <isloop items="${slotcontent.content}" var="contentAsset">   
+             <li class="slide slide1">
+                       <div class="banner-message">
+                             <div class="bannerText">${contentAsset.custom.bannerText}</div>
+                        </div>
+                        <picture>
+                            <source media="(min-width: 480px)" srcset="${contentAsset.custom.customBannerImage.getURL()}"/>
+                            <source media="(min-width: 768px)" srcset="${contentAsset.custom.customBannerImage.getURL()}"/>
+                           <img src="${contentAsset.custom.customBannerImage.getURL()}" alt="${contentAsset.custom.buttonText}"/>
+                        </picture>
+                        
+                        <div class="bannerButton">
+                            <isif condition="${contentAsset.custom.buttonText2 != null}" >   
+                                    <isset name="bgcolor" value="${contentAsset.custom.btnBgColor}" scope="page"/>
+                                    <isset name="textcolor" value="${contentAsset.custom.btnTextColor}" scope="page"/>                         
+                                    <button class="secondslide" style="background-color:${textcolor};border-color:${textcolor};">
+                                             <a href="${URLUtils.url('Search-Show', 'cgid', 'womens-clothing')}" style="color:${bgcolor}"> ${contentAsset.custom.buttonText}</a>
+                                    </button>
+                                    <button class="secondslide" style="background-color:${bgcolor};border-color:${bgcolor};">
+                                             <a href="${URLUtils.url('Search-Show', 'cgid', 'womens-outfits')}" style="color:${textcolor}"> ${contentAsset.custom.buttonText2}</a>
+                                     </button>
+                            <iselse/>
+                                    <button class="firstslide">${contentAsset.custom.buttonText}</button>
+                            </isif>
+                        </div> 
+              </li>
+         </isloop>
+       </ul>
+        <div class="jcarousel-control">
+        </div>
+    </div>
+
+</isif>
