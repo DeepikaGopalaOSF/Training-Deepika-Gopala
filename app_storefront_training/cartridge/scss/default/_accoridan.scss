@@ -4,11 +4,13 @@
 .tabs-title > a {
   padding: 0;
 }
+.tabs-title a[tabindex='-1'] img {
+  filter: grayscale(10);
+}
 .tabs-title a .accordianlabel {
   position: absolute;
   bottom: 0;
   color: white;
-  width: 50%;
   padding: 5px;
   font-size: 15px;
   text-align: left;
