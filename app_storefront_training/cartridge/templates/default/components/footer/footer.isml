@@ -58,7 +58,7 @@
                    <isslot id="global-footer-column" description="Content in column 1 of the Footer" context="global" />
             </div>
             <div class="callout">
-                <iscontentasset aid="footer-support"/>
+                <iscontentasset aid="footer-customer-service"/>
             </div>
             <div class="callout">
                 <iscontentasset aid="footer-about"/>
