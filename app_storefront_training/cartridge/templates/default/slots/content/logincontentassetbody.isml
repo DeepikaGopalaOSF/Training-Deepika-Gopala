@@ -12,10 +12,10 @@
     <isloop items="${slotcontent.content}" var="contentAsset">
         <div>
             <picture>
-                <source media="(min-width: 650px)" srcset="${contentAsset.custom.desktopBannerImage.getURL()}">
-                <source media="(min-width: 465px)" srcset="${contentAsset.custom.desktopBannerImage.getURL()}">
+                <source media="(min-width: 650px)" srcset="${contentAsset.custom.desktopBannerImage.getURL()}" />
+                <source media="(min-width: 465px)" srcset="${contentAsset.custom.desktopBannerImage.getURL()}" />
                 <img src="${contentAsset.custom.desktopBannerImage.getURL()}" alt="${contentAsset.custom.body}"
-                    style="width:auto;">
+                    style="width:auto;" />
             </picture>
             <div class="accordianlabel">
                 <isprint value="${contentAsset.custom.body}" encoding="off" />
