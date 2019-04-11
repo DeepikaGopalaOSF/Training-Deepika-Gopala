@@ -1,10 +1,10 @@
-<iscontent type="text/html" charset="UTF-8" compact="true"/>
+<iscontent type="text/html" charset="UTF-8" compact="true" />
 <iscomment>
     This is the footer for all pages. Be careful caching it if it contains
     user dependent information. Cache its elements instead if necessary (do not forget
     to change the isinclude into a pipeline include for that).
 </iscomment>
-<isinclude template="util/modules"/>
+<isinclude template="util/modules" />
 
 <footer>
     <div class="footer-container">
@@ -12,24 +12,25 @@
             <isslot id="footer-column" description="Content in column 1 of the Footer" context="global" />
         </div>
         <div class="footer-item">
-            <iscontentasset aid="footer-account"/>
+            <iscontentasset aid="footer-account" />
         </div>
         <div class="footer-item">
-            <iscontentasset aid="footer-support"/>
+            <iscontentasset aid="footer-support" />
         </div>
         <div class="footer-item">
-            <iscontentasset aid="footer-about"/>
+            <iscontentasset aid="footer-about" />
         </div>
-    </div>  
+    </div>
 </footer>
 
-    <div class="cookiepolicy">
-<isset name="cookiepolicyCA" value="${dw.content.ContentMgr.getContent('cookie-policy')}" scope="pdict"/>
- <isif condition="${pdict.cookiepolicyCA && pdict.cookiepolicyCA.custom.body!= null && pdict.cookiepolicyCA.online } ">
-  <isprint value="${pdict.cookiepolicyCA.custom.body}" encoding="off" />
-</isif>
+<div class="cookiepolicy">
+    <isset name="cookiepolicyCA" value="${dw.content.ContentMgr.getContent('cookie-policy')}" scope="pdict" />
+    <isif
+        condition="${pdict.cookiepolicyCA && pdict.cookiepolicyCA.custom.body != null && pdict.cookiepolicyCA.online} ">
+        <isprint value="${pdict.cookiepolicyCA.custom.body}" encoding="off" />
+    </isif>
 </div>
-<iscontentasset aid="footer-copy"/> 
+<iscontentasset aid="footer-copy" />
 
 
 <iscomment>
@@ -37,6 +38,6 @@
     is indicating it. So we have to check on every page, if we have to report this event for
     the reporting engine.cooki
 </iscomment>
-<isinclude template="util/reporting/ReportUserRegistration.isml"/>
+<isinclude template="util/reporting/ReportUserRegistration.isml" />
 
-<isinclude template="components/footer/footer_UI"/>
+<isinclude template="components/footer/footer_UI" />
