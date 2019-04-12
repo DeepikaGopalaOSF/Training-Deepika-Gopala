@@ -4,7 +4,7 @@
 
         <!-- User Details -->
 
-        <!-- products -->
+        <!-- Personal Info -->
             <field formid="fname" label="forms.user.personalinfo.firstname.label" type="string" mandatory="true" binding="firstName" max-length="50"/>
             <field formid="lname" label="forms.user.personalinfo.lastname.label" type="string" mandatory="true" binding="lastName" max-length="50"/>
             <field formid="gender" label="forms.user.personalinfo.gender.label" type="string" mandatory="true" bindings="gender">

@@ -6,16 +6,11 @@
  * 
  */
 
-var ISML = require('dw/template/ISML');
-var guard = require('app_storefront_controllers/cartridge/scripts/guard');
+var ISML = require ('dw/template/ISML');
+var guard = require ('app_storefront_controllers/cartridge/scripts/guard');
 
-
-function start(){
-    
-        ISML.renderTemplate('useraddrpayment/useraddrpaymentform.isml',{
-                ContinueURL: dw.web.URLUtils.https('UserAddrPayment-Success')
-        });
-
+function start () {
+  ISML.renderTemplate ('useraddrpayment/useraddrpaymentform.isml');
 }
 
-exports.Start = guard.ensure(['get'], start);
+exports.Start = guard.ensure (['get'], start);
