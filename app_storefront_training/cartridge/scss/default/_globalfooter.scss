@@ -1,0 +1,18 @@
+.shop-payment-nshipping > .rowitem:nth-child(2) .col-break:first-child{
+    float:left;
+    width:auto;
+}
+
+#fullwidth-content .callout, #shipping-content .callout, .callout{
+    background-color: transparent;
+    border: 0;
+    margin-bottom: 0;
+}
+#footer-social{
+    background-color: black;
+    color:white;
+}
+
+#footer-social  *{
+    display: inline;
+}
