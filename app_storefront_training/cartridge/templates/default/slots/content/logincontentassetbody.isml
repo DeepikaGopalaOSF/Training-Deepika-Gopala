@@ -1,0 +1,25 @@
+<iscontent type="text/html" charset="UTF-8" compact="true" />
+<iscache type="relative" hour="24" />
+
+<iscomment>
+    This template renders the slot content of a content asset
+    using only the body of the content.
+    Note, only one content asset body is rendered.
+</iscomment>
+
+<iscomment>make sure we have content at all</iscomment>
+<isif condition="${slotcontent != null}">
+    <isloop items="${slotcontent.content}" var="contentAsset">
+        <div>
+            <picture>
+                <source media="(min-width: 650px)" srcset="${contentAsset.custom.desktopBannerImage.getURL()}" />
+                <source media="(min-width: 465px)" srcset="${contentAsset.custom.desktopBannerImage.getURL()}" />
+                <img src="${contentAsset.custom.desktopBannerImage.getURL()}" alt="${contentAsset.custom.body}"
+                    style="width:auto;" />
+            </picture>
+            <div class="accordianlabel">
+                <isprint value="${contentAsset.custom.body}" encoding="off" />
+            </div>
+        </div>
+    </isloop>
+</isif>
