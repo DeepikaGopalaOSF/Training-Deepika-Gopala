@@ -19,6 +19,7 @@ var countries = require('./countries'),
     validator = require('./validator'),
     tls = require('./tls'),
     consentTracking = require('./consentTracking');
+    trainingCart = require("../../../app_storefront_training/cartridge/scripts/cart");
 
 // if jQuery has not been loaded, load from google cdn
 if (!window.jQuery) {
@@ -175,6 +176,9 @@ var app = {
         validator.init();
         rating.init();
         searchplaceholder.init();
+        trainingCart.init();
+
+
         // execute page specific initializations
         $.extend(page, window.pageContext);
         var ns = page.ns;
