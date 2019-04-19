@@ -1,0 +1,7 @@
+<isdecorate template="pt_service">
+<isinclude template="util/modules"/>
+ <isset name="contentObj" value="${dw.content.ContentMgr.getContent('full-width-content-asset')}" scope="page"/>
+   <h1>${contentObj.name}</h1>
+   <isprint value="${contentObj.custom.body}" encoding="off"/>
+</isdecorate>
+

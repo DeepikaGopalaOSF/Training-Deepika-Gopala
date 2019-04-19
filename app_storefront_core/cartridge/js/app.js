@@ -18,7 +18,8 @@ var countries = require('./countries'),
     util = require('./util'),
     validator = require('./validator'),
     tls = require('./tls'),
-    consentTracking = require('./consentTracking');
+    consentTracking = require('./consentTracking'),
+    cookiepolicyaccept = require("../../../app_storefront_training/cartridge/scripts/cookiepolicy");
 
 // if jQuery has not been loaded, load from google cdn
 if (!window.jQuery) {
@@ -29,8 +30,8 @@ if (!window.jQuery) {
 }
 
 require('./jquery-ext')();
-require('./cookieprivacy')();
-consentTracking.init();
+//require('./cookieprivacy')();
+//consentTracking.init();
 require('./captcha')();
 
 function initializeEvents() {
@@ -58,7 +59,8 @@ function initializeEvents() {
             }
 
             $(this).next('div.char-count').find('.char-remain-count').html(charsRemain);
-        });
+        })
+
 
     /**
      * initialize search suggestions, pending the value of the site preference(enhancedSearchSuggestions)
@@ -165,9 +167,13 @@ var app = {
         if (document.cookie.length === 0) {
             $('<div/>').addClass('browser-compatibility-alert').append($('<p/>').addClass('browser-error').html(Resources.COOKIES_DISABLED)).appendTo('#browser-check');
         }
+
+      
         initializeDom();
         initializeEvents();
 
+
+        
         // init specific global components
         countries.init();
         tooltip.init();
@@ -175,6 +181,9 @@ var app = {
         validator.init();
         rating.init();
         searchplaceholder.init();
+        cookiepolicyaccept.init();
+
+
         // execute page specific initializations
         $.extend(page, window.pageContext);
         var ns = page.ns;
@@ -185,6 +194,13 @@ var app = {
         // Check TLS status if indicated by site preference
         if (SitePreferences.CHECK_TLS === true) {
             tls.getUserAgent();
+        }
+
+
+        if(document.cookie.indexOf("dw_cookies_accepted")>0){
+            $("div.cookiepolicy").hide();
+        }else{
+            $("div.cookiepolicy").show();
         }
     }
 };

@@ -1,0 +1,49 @@
+.panel{
+    margin:30px 10px;
+    display:block;
+}
+.panel-heading{
+    background-color: #cccccc;
+    display: block;
+    padding: 10px;
+    text-align: left;
+    width: 100%;
+    font-size: 20px;
+}
+.form-row > label {
+    display: inline-block;
+    width:150px;
+}
+.form-row > .field-wrapper{
+    display: inline;
+    width: 400px;
+}
+.panel-body{
+     text-align: center;
+}
+input[type="text"], input[type="number"], input[type="password"], input[type="date"] ,  textarea , select{
+    width:250px;
+    display:inline;
+}
+.terms-conditions{
+    border:1px solid #ddd;
+    margin:5% 10%;
+    max-height:500px;
+    padding:10px;
+    overflow:scroll;
+    text-align:left;
+    width:80%;
+}
+.billme-content{
+    display:none;
+    padding:10px 0;
+}
+.creditcard-content{
+    padding-top:10px;
+}
+label.radiolabel{
+    display:inline;
+}
+.backtotop{
+    float: right;
+}
